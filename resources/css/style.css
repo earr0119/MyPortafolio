@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; /* Remove underline */
+    outline: none;
+    scroll-behavior: smooth;
+}
+section{
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+h2{
+  font-size: 3.8rem;
+  color: #ffff;
+}
+.header{
+  background-color: #202020;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 2rem 9%;
+  z-index: 100;
+}
+.nav-links a{
+  margin-left: 3rem;
+  color: #fff;
+  transition: 0.3s;
+}
+.header 
+.container-logo{
+  cursor: pointer;
+}
+.header 
+.container-logo img{
+  height: 70px;
+  width: auto;
+  transition: 0.3;
+}
+.header 
+.container-logo 
+img:hover{
+  transform: scale(1.2);
+}
+.nav-links a:hover{
+  color: #3df505e1; 
+}
+.home{
+  background-image: url(../img/bk.png);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.principal-pic img{
+  width: 50vh;
+  border-radius: 10rem;
+  border: 2px solid rgba(61, 245, 5, 0.881);
+  box-shadow: 5px 5px 10px rgba(61, 245, 5, 0.881);
+}
+.home-container h3{
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.home-container h1{
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.home-container p{
+  font-size: 1.6rem;
+}
+.social-media a{
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  margin: 3rem 1.5rem 3rem 0;
+  font-size: 2.5rem;
+  color: #202020;
+  transition: 0.5s ease;
+}
+.social-media a:hover{
+  color: rgb(61, 245, 5, 0.881);
+}
+.about{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../img/pc.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;   
+}
+.about div{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+.about h2{
+  text-align: center;
+  padding-bottom: 6rem;
+  
+}
+.about-pic img{
+  width: 50vh;
+  border: 2px solid rgba(61, 245, 5, 0.881);
+  box-shadow: 5px 5px 10px rgba(61, 245, 5, 0.881);
+  border-radius: 10rem;
+}
+.about-text{
+  padding-left: 2rem;
+  color: #ffff;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
+.experience{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../img/bg.jpg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover; 
+}
+.experience h2{
+  text-align: center;
+  padding-bottom: 6rem;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(18, 17, 17);
+  border: 5px solid #34c01c;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgb(255, 255, 255);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+.skill{
+  padding: 80px 0 100px 0;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+  url("../img/bk.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  color: #fff;
+}
+.skill .content-section{
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 10px;
+}
+.skill .content-section h4{
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.skill .content-section .row{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.skill .content-section .row .colum{
+  width: 35%;
+  text-align: left;
+}
+.skill .content-section .row .colum .cont-bar{
+  display: flex;
+  align-items: center;
+}
+.skill .content-section .bar{
+  display: flex;
+  border: 1px solid rgba(18, 232, 47, 0.938);
+  padding: 2px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+.skill .content-section .bar .e{
+  background-color: rgba(26, 234, 15, 0.234);
+  width: 20px;
+  height: 30px;
+  margin-right: 2px;
+}
+.projects h2{
+  text-align: center;
+  padding-bottom: 6rem;
+}
+.projects{
+  background-color: rgb(13, 13, 13);
+}
+.projects .flip-box{
+  display: inline-table;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+}
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover 
+.flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, 
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: rgba(56, 255, 30, 0.466);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.contact{
+  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+  url("../img/bk.png");
+  width: auto;
+  padding: 7rem 0 5rem 0;
+  color: #e6e6e6;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact .title-section{
+  margin-bottom: 3rem;
+}
+.contact .content-section{
+  max-width: 60rem;
+  margin: auto;
+  padding: 0 1rem;
+}
+.contact .content-section h3{
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.contact .content-section .row{
+  display: flex;
+  justify-content: space-around;
+}
+.contact .content-section .row .colum{
+  margin-top: 3rem;
+}
+.contact .content-section .row .colum h3{
+  color: #1be730;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+
+/*Skill part*/
+.skill .content-section .row{
+  display: block;
+}
+.skill .content-section .row .colum{
+  width: 100%;
+  text-align: center;
+}
+.skill .content-section .row .colum .cont-bar{
+  justify-content: center;
+}
+.contact .content-section .row{
+  display: block;
+}
+}
