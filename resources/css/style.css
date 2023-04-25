@@ -15,7 +15,7 @@ h2{
   color: #ffff;
 }
 .header{
-  background-color: #202020;
+  background-color: #000000;
   position: fixed;
   top: 0;
   left: 0;
@@ -30,6 +30,9 @@ h2{
 .nav-links a{
   margin-left: 3rem;
   color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 2rem;
   transition: 0.3s;
 }
 .header 
@@ -280,7 +283,7 @@ img:hover{
   background-color: transparent;
   width: 300px;
   height: 200px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid rgba(18, 214, 41, 0.711);
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -378,6 +381,42 @@ img:hover{
 
 
 
+@media (max-width: 1200px){
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px){
+  .header {
+    padding: 2rem 3%;
+  }
+  section{
+    padding: 10rem 3% 2rem;
+  }
+  .footer{
+    padding: 2rem 3%;
+  }
+}
+@media (max-width: 768px){
+  .nav-links{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: #000000;
+  }
+  .home{
+    flex-direction: column;
+  }
+  .about div{
+    flex-direction: column-reverse;
+  }
+  .about-pic img{
+    width: 70vw;
+    margin-top: 4rem;
+  }
+}
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
