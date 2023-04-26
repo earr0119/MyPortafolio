@@ -1,3 +1,25 @@
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll("header nav a");
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offSet = sec.offsetTop;
+        let height = sec.offsetHeight - 150;
+        let id = sec.getAttribute("id");
+
+        if (top >= offSet && top < offSet + height) {
+            navLinks.forEach(links => {
+                links.classList.remove("active");
+                document.querySelector('header nav a[href*=' + id + ']').classList.add("active");
+
+            });
+    
+        }
+    });
+
+}
+
 function bar(id_bar){
     for(i=0;i<=16;i++){
         let div = document.createElement("div");
@@ -40,22 +62,22 @@ function skillEfect(){
         whole = true;
         const intervalHtml = setInterval(function(){
             fillBar(html, 8, 0, intervalHtml);
-        },100);
+        },300);
         const intervalJavascript = setInterval(function(){
             fillBar(javascript, 6, 1, intervalJavascript);
-        },100);
+        },400);
         const intervalJava = setInterval(function(){
             fillBar(java, 8, 2, intervalJava);
-        },100);
+        },300);
         const intervalGit = setInterval(function(){
             fillBar(git, 8, 3, intervalGit);
-        },100);
+        },300);
         const intervalSql = setInterval(function(){
             fillBar(sql, 8, 4, intervalSql);
-        },100);
+        },300);
         const intervalNode = setInterval(function(){
             fillBar(node, 7, 5, intervalNode);
-        },100);
+        },400);
     }
 }
 
@@ -67,10 +89,13 @@ function fillBar(id_bar, quantity, indx, interval){
         let elements = id_bar.getElementsByClassName("e");
         elements[x].style.backgroundColor = "#3df505e1";
     }else{
-        clearInterval(interval)
+        counter[indx] = -1;
+        let elements = id_bar.getElementsByClassName("e");
+        for(i=0;i<quantity;i++){
+            elements[i].style.backgroundColor = "";
+        }
     }
 }
-
 //detecting the scrolling of the mouse to aply the animation
 window.onscroll = function(){
     skillEfect();

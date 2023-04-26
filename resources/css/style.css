@@ -5,6 +5,7 @@
     text-decoration: none; /* Remove underline */
     outline: none;
     scroll-behavior: smooth;
+    border: none;
 }
 section{
   min-height: 100vh;
@@ -34,18 +35,16 @@ h2{
   font-weight: 500;
   margin-left: 2rem;
   transition: 0.3s;
-}
-.header 
+} 
 .container-logo{
-  cursor: pointer;
+  cursor: default;
 }
-.header 
 .container-logo img{
   height: 70px;
   width: auto;
   transition: 0.3;
-}
-.header 
+  cursor: default;
+} 
 .container-logo 
 img:hover{
   transform: scale(1.2);
@@ -103,6 +102,8 @@ img:hover{
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  letter-spacing: .1em;
+  line-height: 1.5;
   padding-bottom: 3rem;
 }
 .about h2{
@@ -216,6 +217,9 @@ img:hover{
   background-color: white;
   position: relative;
   border-radius: 6px;
+  letter-spacing: .1em;
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 .skill{
@@ -357,6 +361,18 @@ img:hover{
 }
 .contact .content-section .row .colum h3{
   color: #1be730;
+}
+footer h4{
+  font-size: 1.5rem;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+footer{
+  background-color: #000000;
+  margin-top: -35px;
 }
 
 @media (max-width: 1200px){
